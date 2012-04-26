@@ -1,0 +1,30 @@
+plugin.tx_folio {
+	view {
+		templateRootPath = {$plugin.tx_folio.view.templateRootPath}
+		partialRootPath = {$plugin.tx_folio.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_folio.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_folio.persistence.storagePid}
+	}
+}
+
+plugin.tx_folio._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-folio table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-folio table th {
+		font-weight:bold;
+	}
+
+	.tx-folio table td {
+		vertical-align:top;
+	}
+)

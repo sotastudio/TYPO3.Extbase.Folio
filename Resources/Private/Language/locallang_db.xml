@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'folio'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+            
+			<label index="tx_folio_domain_model_customer">Customer</label>
+			<label index="tx_folio_domain_model_customer.name">Name</label>
+			<label index="tx_folio_domain_model_customer.logo">Logo</label>
+			<label index="tx_folio_domain_model_customer.description">Description</label>
+			<label index="tx_folio_domain_model_customer.project">Project</label>
+
+			<label index="tx_folio_domain_model_project">Project</label>
+			<label index="tx_folio_domain_model_project.name">Name</label>
+			<label index="tx_folio_domain_model_project.tags">Tags</label>
+			<label index="tx_folio_domain_model_project.content">Content</label>
+
+			<label index="tx_folio_domain_model_tags">Tags</label>
+
+			<label index="tx_folio_domain_model_content">Content</label>
+			<label index="tt_content.tx_extbase_type.Tx_Folio_Content">Folio Content</label>
+			
+		</languageKey>
+	</data>
+</T3locallang>
