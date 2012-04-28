@@ -136,31 +136,3 @@ CREATE TABLE tt_content (
 	project int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
-
-#
-# Table structure for table 'tx_folio_domain_model_project'
-#
-CREATE TABLE tx_folio_domain_model_project (
-
-	customer  int(11) unsigned DEFAULT '0' NOT NULL,
-
-);
-
-#
-# Table structure for table 'tx_folio_domain_model_tags'
-#
-CREATE TABLE tx_folio_domain_model_tags (
-
-	project  int(11) unsigned DEFAULT '0' NOT NULL,
-	name varchar(255) DEFAULT '' NOT NULL,
-
-);
-
-#
-# Table structure for table 'tt_content'
-#
-CREATE TABLE tt_content (
-
-	project  int(11) unsigned DEFAULT '0' NOT NULL,
-
-);
