@@ -9,7 +9,7 @@ $TCA['tx_folio_domain_model_tags'] = array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, name, --div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, hidden;;1, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -91,6 +91,15 @@ $TCA['tx_folio_domain_model_tags'] = array(
 				'range' => array(
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
 				),
+			),
+		),
+		'name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_tags.name',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim,required'
 			),
 		),
 		'project' => array(
