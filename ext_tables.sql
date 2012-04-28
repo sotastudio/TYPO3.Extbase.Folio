@@ -96,6 +96,8 @@ CREATE TABLE tx_folio_domain_model_tags (
 
 	project int(11) unsigned DEFAULT '0' NOT NULL,
 
+	name varchar(255) DEFAULT '' NOT NULL,
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
@@ -150,6 +152,7 @@ CREATE TABLE tx_folio_domain_model_project (
 CREATE TABLE tx_folio_domain_model_tags (
 
 	project  int(11) unsigned DEFAULT '0' NOT NULL,
+	name varchar(255) DEFAULT '' NOT NULL,
 
 );
 

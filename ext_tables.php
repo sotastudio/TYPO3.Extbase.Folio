@@ -75,7 +75,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_folio_domain_model_tags');
 $TCA['tx_folio_domain_model_tags'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_tags',
-		'label' => 'uid',
+		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -95,10 +95,6 @@ $TCA['tx_folio_domain_model_tags'] = array(
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Tags.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_folio_domain_model_tags.gif'
 	),
-);
-
-$tmp_folio_columns = array(
-
 );
 
 $tmp_folio_columns['project'] = array(
