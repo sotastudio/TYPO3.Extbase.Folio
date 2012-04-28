@@ -9,7 +9,12 @@ $TCA['tx_folio_domain_model_project'] = array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, tags, content',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, name, tags, content,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, hidden;;1, starttime, endtime'),
+		'1' => array(
+			'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, name,'
+						. '--div--;LLL:EXT:folio/Resources/Private/Language/locallang_tca.xml:tabs.ce, content,'
+						. '--div--;LLL:EXT:folio/Resources/Private/Language/locallang_tca.xml:tabs.relations, tags,'
+						. '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, hidden;;1, starttime, endtime'
+		),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),

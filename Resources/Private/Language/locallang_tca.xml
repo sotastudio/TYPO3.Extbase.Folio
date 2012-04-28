@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Folio extension's TCA</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tabs.projects">Projects</label>
+			<label index="tabs.relations">Relations</label>
+			<label index="tabs.ce">Content</label>
+		</languageKey>
+	</data>
+</T3locallang>
