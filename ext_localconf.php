@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
 
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Folio',
+	'Pi1',
 	array(
 		'Customer' => 'list, show',
 		'Project' => 'list, show',
