@@ -4,7 +4,6 @@
  *  Copyright notice
  *
  *  (c) 2012 Andy Hausmann <hi@andy-hausmann.de>
- *  Andreas Walter <mail@andreas-walter.de>
  *
  *  All rights reserved
  *
@@ -28,6 +27,7 @@
 /**
  * Custom suggest receiver for Tags creation
  *
+ * @author Andy Hausmann <hi@andy-hausmann.de>
  * @package folio
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
