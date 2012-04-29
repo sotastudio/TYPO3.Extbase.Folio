@@ -11,4 +11,14 @@ plugin.tx_folio {
 		# cat=plugin.tx_folio//a; type=string; label=Default storage PID
 		storagePid = 
 	}
+	settings {
+		# String: File reference to the FlexSlider's Css file - empty this value if you want to include this at your own
+		css = EXT:folio/Resources/Public/Css/styles.css
+ 		lib {
+ 			# String: File reference to alternative jQuery library if EXT t3jquery is not in use
+ 			jQuery = EXT:folio/Resources/Public/Js/jquery-min.js
+ 			# Bool: Flag to define whether the script shoul be moved to the footer or not
+ 			moveToFooter = 0
+ 		}
+	}
 }
