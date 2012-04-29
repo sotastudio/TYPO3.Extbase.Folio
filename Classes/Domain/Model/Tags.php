@@ -30,9 +30,80 @@
  *
  * @package folio
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
- *
  */
 class Tx_Folio_Domain_Model_Tags extends Tx_Extbase_DomainObject_AbstractValueObject {
+
+	/**
+	 * @var DateTime
+	 */
+	protected $crdate;
+
+	/**
+	 * @var DateTime
+	 */
+	protected $tstamp;
+
+	/**
+	 * @var string
+	 */
+	protected $name;
+
+	/**
+	 * Get crdate
+	 *
+	 * @return DateTime
+	 */
+	public function getCrdate() {
+		return $this->crdate;
+	}
+
+	/**
+	 * Set crdate
+	 *
+	 * @param DateTime $crdate crdate
+	 * @return void
+	 */
+	public function setCrdate($crdate) {
+		$this->crdate = $crdate;
+	}
+
+	/**
+	 * Get Tstamp
+	 *
+	 * @return DateTime
+	 */
+	public function getTstamp() {
+		return $this->tstamp;
+	}
+
+	/**
+	 * Set tstamp
+	 *
+	 * @param DateTime $tstamp tstamp
+	 * @return void
+	 */
+	public function setTstamp($tstamp) {
+		$this->tstamp = $tstamp;
+	}
+
+	/**
+	 * Get title
+	 *
+	 * @return string
+	 */
+	public function getName() {
+		return $this->name;
+	}
+
+	/**
+	 * Set title
+	 *
+	 * @param string $title title
+	 * @return void
+	 */
+	public function setName($name) {
+		$this->name = $name;
+	}
 
 }
 ?>
