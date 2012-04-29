@@ -3,7 +3,7 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-// Build extension name vars - used for plugin registration, flexforms and similar
+	// Build extension name vars - used for plugin registration, flexforms and similar
 $extensionName = t3lib_div::underscoredToUpperCamelCase($_EXTKEY);
 $pluginSignature = strtolower($extensionName) . '_pi1';
 
@@ -111,6 +111,16 @@ $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] = $TCA['tt_content']
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= ',--div--;LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_content,';
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= '';
 
+/**
+ * Add Ajax Router for Tag save in Flexform.
+ */
+if (TYPO3_MODE == 'BE') {
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['AJAX']['Folio::createTag'] = 'typo3conf/ext/folio/Classes/Hooks/SuggestReceiverCall.php:Tx_Folio_Hooks_SuggestReceiverCall->createTag';
+}
+
+/**
+ * Add Plugin to New Content Element Wizard.
+ */
 if (TYPO3_MODE === 'BE') {
 	// Add Plugin to CE Wizard
 	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses'][$pluginSignature . '_wizicon'] = t3lib_extMgm::extPath($_EXTKEY) . 'Resources/Private/Php/class.' . $_EXTKEY . '_wizicon.php';

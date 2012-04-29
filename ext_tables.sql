@@ -53,7 +53,7 @@ CREATE TABLE tx_folio_domain_model_project (
 	customer int(11) unsigned DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	tags int(11) unsigned DEFAULT '0' NOT NULL,
+	tags int(11) DEFAULT '0' NOT NULL,
 	content int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -127,6 +127,20 @@ CREATE TABLE tx_folio_domain_model_tags (
 	KEY language (l10n_parent,sys_language_uid)
 
 );
+
+
+#
+# Table structure for table 'tx_folio_domain_model_project_tags_mm'
+#
+CREATE TABLE tx_folio_domain_model_project_tags_mm (
+	uid_local int(11) DEFAULT '0' NOT NULL,
+	uid_foreign int(11) DEFAULT '0' NOT NULL,
+	tablenames varchar(30) DEFAULT '' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
 
 #
 # Table structure for table 'tt_content'

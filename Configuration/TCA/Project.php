@@ -3,6 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
+$pathLL = 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:';
+
 $TCA['tx_folio_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_folio_domain_model_project']['ctrl'],
 	'interface' => array(
@@ -100,7 +102,7 @@ $TCA['tx_folio_domain_model_project'] = array(
 		),
 		'name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_project.name',
+			'label' => $pathLL . 'tx_folio_domain_model_project.name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -109,24 +111,43 @@ $TCA['tx_folio_domain_model_project'] = array(
 		),
 		'tags' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_project.tags',
+			'label' => $pathLL . 'tx_folio_domain_model_project.tags',
 			'config' => array(
-				'type' => 'inline',
+				'type' => 'group',
+				'internal_type' => 'db',
+				'allowed' => 'tx_folio_domain_model_tags',
+				'MM' => 'tx_folio_domain_model_project_tags_mm',
 				'foreign_table' => 'tx_folio_domain_model_tags',
-				'foreign_field' => 'project',
-				'maxitems'      => 9999,
-				'appearance' => array(
-					'collapse' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
+				'foreign_table_where' => 'ORDER BY tx_folio_domain_model_tags.name',
+				'size' => 10,
+				'autoSizeMax' => 20,
+				'minitems' => 0,
+				'maxitems' => 20,
+				'wizards' => array(
+					'_PADDING'  => 2,
+					'_VERTICAL' => 1,
+					'suggest' => array(
+						'type' => 'suggest',
+						'default' => array(
+							'receiverClass' => 'Tx_Folio_Hooks_SuggestReceiver'
+						),
+					),
+					'list' => array(
+						'type'   => 'script',
+						'title'  => 'LLL:EXT:news/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_tags.tags.list',
+						'icon'   => 'list.gif',
+						'params' => array(
+							'table' => 'tx_folio_domain_model_tags',
+							//'pid'   => $configuration->getTagPid(),
+						),
+						'script' => 'wizard_list.php',
+					),
 				),
 			),
 		),
 		'content' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_project.content',
+			'label' => $pathLL . 'tx_folio_domain_model_project.content',
 			'config' => array(
 				'type' => 'inline',
 				'foreign_table' => 'tt_content',
