@@ -99,7 +99,7 @@ $TCA['tx_folio_domain_model_tags'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'trim,required'
+				'eval' => 'trim,required,unique'
 			),
 		),
 		'project' => array(
