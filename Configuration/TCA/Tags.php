@@ -3,6 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
+$pathLL = 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:';
+
 $TCA['tx_folio_domain_model_tags'] = array(
 	'ctrl' => $TCA['tx_folio_domain_model_tags']['ctrl'],
 	'interface' => array(
@@ -95,7 +97,7 @@ $TCA['tx_folio_domain_model_tags'] = array(
 		),
 		'name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_tags.name',
+			'label' => $pathLL . 'tx_folio_domain_model_tags.name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
