@@ -50,12 +50,12 @@ class Tx_Folio_Hooks_SuggestReceiverCall {
 		try {
 				// check if a tag is submitted
 			if (!isset($request['item']) || empty($request['item'])) {
-				throw new Exception('error_no-tag');
+				throw new Exception('error_noTag');
 			}
 
 			$newsUid = $request['newsid'];
 			if ((int)$newsUid === 0 && (strlen($newsUid) == 16 && !t3lib_div::isFirstPartOfStr($newsUid, 'NEW'))) {
-				throw new Exception('error_no-newsid');
+				throw new Exception('error_noProjectID');
 			}
 
 				// get tag uid
@@ -119,7 +119,7 @@ class Tx_Folio_Hooks_SuggestReceiverCall {
 		}
 
 		if ($tagUid == 0) {
-			throw new Exception('error_no-tag-created');
+			throw new Exception('error_noTagCreated');
 		}
 
 		return $tagUid;

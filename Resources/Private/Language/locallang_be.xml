@@ -7,79 +7,25 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="pi1_title">Folio</label>
-			<label index="pi1_plus_wiz_description">The popular FlexSlider</label>
+			<label index="pi1_plus_wiz_description">Plugin to display a Portfolio.</label>
 			<!-- Flexforms -->
 			<label index="flexforms_tab.settings">Settings</label>
-			<label index="flexforms_tab.slideshow">Slideshow</label>
-			<label index="flexforms_tab.animation">Animation</label>
-			<label index="flexforms_tab.images">Images</label>
-			<label index="flexforms_tab_desc.images"><![CDATA[
-			This is an experimental section!
-
-			FlexSlider acts 100% flexible in the Frontend and doesn't need any image dimension.
-			If you really need to bring the Frontend output to heel, you can define whatever you may need and test it for optimal visual results.
-
-			Cropping is allowed - whether it works, depends on your setup. Example: width = 960c
-
-			]]></label>
-			<label index="flexforms_settings.animation">Animation effect</label>
-			<label index="flexforms_settings.animation.fade">Fade</label>
-			<label index="flexforms_settings.animation.slide">Slide</label>
-			<label index="flexforms_settings.slideDirection">Slide direction</label>
-			<label index="flexforms_settings.slideDirection.horizontal">Horizontal</label>
-			<label index="flexforms_settings.slideDirection.vertical">Vertical</label>
-			<label index="flexforms_settings.slideshow">Auto Play</label>
-			<label index="flexforms_settings.slideshowSpeed">Slideshow Speed (in ms), defaults to 7000</label>
-			<label index="flexforms_settings.animationDuration">Animation duration (in ms), defaults to 600</label>
-			<label index="flexforms_settings.controlNav">Show control navigation</label>
-			<label index="flexforms_settings.directionNav">Show direction navigation</label>
-			<label index="flexforms_settings.randomize">Randomize slide order</label>
-			<label index="flexforms_settings.animationLoop">Loop slides</label>
-			<label index="flexforms_settings.pauseOnHover">Pause the slideshow when hovering</label>
-			<label index="flexforms_settings.images.width">Width (in px)</label>
-			<label index="flexforms_settings.images.height">Height (in px)</label>
-			<label index="flexforms_settings.images.minWidth">min. Width (in px)</label>
-			<label index="flexforms_settings.images.minHeight">min. Height (in px)</label>
-			<label index="flexforms_settings.images.maxWidth">max. Width (in px)</label>
-			<label index="flexforms_settings.images.maxHeight">max. Height (in px)</label>
+			<!-- FlexForms: Suggest Receiver -->
+			<label index="tag_suggest">Tag "%s" could not be found, wanna create it? &lt;strong&gt;Click here&lt;/strong&gt;</label>
+			<label index="tag_suggest_error_noTag">No tag submitted!</label>
+			<label index="tag_suggest_error_noProjectID">No news id given!</label>
+			<label index="tag_suggest_error_no-tag-created">No new tag created!</label>
 		</languageKey>
 		<languageKey index="de" type="array">
-			<label index="pi1_title">FlexSlider</label>
-			<label index="pi1_plus_wiz_description">Der berühmte FlexSlider</label>
+			<label index="pi1_title">Folio</label>
+			<label index="pi1_plus_wiz_description">Plugin zur Darstellung eines Portdolios.</label>
 			<!-- Flexforms -->
 			<label index="flexforms_tab.settings">Einstellungen</label>
-			<label index="flexforms_tab.slideshow">Slideshow</label>
-			<label index="flexforms_tab.animation">Animation</label>
-			<label index="flexforms_tab.images">Bilder</label>
-			<label index="flexforms_tab_desc.images"><![CDATA[
-			Dies ist ein experimenteller Bereich!
-
-			Der FlexSlider verhält sich 100%-ig flexibel im Frontend und benötigt keinerlei Angabe von Bild-Dimensionen.
-			Sollte eine gewisse Kontrolle hinsichtlich der visuellen Ausgabe erforderlich sein, so können hier Anpassungen vorgenommen werden.
-
-			Bild-Zuschnitt ist erlaubt - ob es funktioniert, hängt vom Setup ab. Beispiel: width = 960c
-
-			]]></label>
-			<label index="flexforms_settings.animation">Animationseffekt</label>
-			<label index="flexforms_settings.animation.fade">Faden</label>
-			<label index="flexforms_settings.animation.slide">Sliden</label>
-			<label index="flexforms_settings.slideDirection">Slide-Richtung</label>
-			<label index="flexforms_settings.slideDirection.horizontal">Horizontal</label>
-			<label index="flexforms_settings.slideDirection.vertical">Vertikal</label>
-			<label index="flexforms_settings.slideshow">Automatisches Abspielen</label>
-			<label index="flexforms_settings.slideshowSpeed">Slideshow-Geschwindigkeit (in ms), Standard: 7000</label>
-			<label index="flexforms_settings.animationDuration">Animationsdauer (in ms), Standard: 600</label>
-			<label index="flexforms_settings.controlNav">Zeige Kontroll-Navigation</label>
-			<label index="flexforms_settings.directionNav">Zeige Richtungs-Navigation</label>
-			<label index="flexforms_settings.randomize">Sortierung nach Zufall</label>
-			<label index="flexforms_settings.animationLoop">Slides am Ende wiederholen</label>
-			<label index="flexforms_settings.pauseOnHover">Slideshow pasusiren bei Mouseover</label>
-			<label index="flexforms_settings.images.width">Breite (in px)</label>
-			<label index="flexforms_settings.images.height">Höhe (in px)</label>
-			<label index="flexforms_settings.images.minWidth">min. Breite (in px)</label>
-			<label index="flexforms_settings.images.minHeight">min. Höhe (in px)</label>
-			<label index="flexforms_settings.images.maxWidth">max. Breite (in px)</label>
-			<label index="flexforms_settings.images.maxHeight">max. Höhe (in px)</label>
+			<!-- FlexForms: Suggest Receiver -->
+			<label index="tag_suggest">Tag "%s" konnte nicht gefunden werden - &lt;strong&gt;hier klicken&lt;/strong&gt; zum erstellen.</label>
+			<label index="tag_suggest_error_no-tag">Kein Tag übergeben!</label>
+			<label index="tag_suggest_error_no-newsid">Keine Projekt ID übergeben!</label>
+			<label index="tag_suggest_error_noTagCreated">Es wurde kein neues Tag erstellt!</label>
 		</languageKey>
 	</data>
 </T3locallang>

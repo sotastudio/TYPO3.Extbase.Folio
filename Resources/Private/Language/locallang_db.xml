@@ -20,10 +20,11 @@
 
 			<label index="tx_folio_domain_model_tags">Tags</label>
 			<label index="tx_folio_domain_model_tags.name">Name</label>
+			<label index="tx_folio_domain_model_tags.tags.list">List all tags</label>
 
 			<label index="tx_folio_domain_model_content">Content</label>
 			<label index="tt_content.tx_extbase_type.Tx_Folio_Content">Folio Content</label>
-			
+
 		</languageKey>
 	</data>
 </T3locallang>
