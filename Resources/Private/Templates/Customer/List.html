@@ -1,35 +1,29 @@
 <f:layout name="Default" />
 
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="main">
-<h1>Listing for Customer</h1>
-
 <f:flashMessages />
 
-<table  class="tx_folio" >
-	<tr>
-		<th><f:translate key="tx_folio_domain_model_customer.name" /></th>
-		<th><f:translate key="tx_folio_domain_model_customer.logo" /></th>
-		<th><f:translate key="tx_folio_domain_model_customer.description" /></th>
-	</tr>
-
-	<f:for each="{customers}" as="customer">
-		<tr>
-			<td><f:link.action action="show" arguments="{customer : customer}"> {customer.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{customer : customer}"> {customer.logo}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{customer : customer}"> {customer.description}</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
+<div  class="tx_folio" >
+	<div class="customer-list">
+		<f:for each="{customers}" as="customer">
+			<div class="customer-item">
+				<h3><f:link.action action="show" arguments="{customer : customer}"> {customer.name}</f:link.action></h3>
+				<figure>
+					<f:link.action action="show" arguments="{customer : customer}">
+						<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="200" />
+					</f:link.action>
+				</figure>
+				<p>
+					<f:format.crop maxCharacters="200" append="&nbsp;..."><f:format.stripTags>{customer.description}</f:format.stripTags></f:format.crop>
+					<span class="customer-detail">
+						<f:link.action action="show" arguments="{customer : customer}">
+							<f:translate key="customerDetails">Customer Details</f:translate>
+						</f:link.action>
+					</span>
+				</p>
+			</div>
+		</f:for>
+	</div>
+</div>
 
 </f:section>

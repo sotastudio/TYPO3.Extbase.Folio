@@ -17,6 +17,14 @@
 			<label index="tx_folio_domain_model_project.content">content</label>
 			<label index="tx_folio_domain_model_tags">Tags</label>
 			<label index="tx_folio_domain_model_content">Content</label>
+			<label index="backToList">Back to list</label>
+			<label index="customerDetails">Customer details</label>
+			<label index="projectDetails">Project details</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="backToList">Zurück zur Liste</label>
+			<label index="customerDetails">Kunden Details</label>
+			<label index="projectDetails">Projekt Details</label>
 		</languageKey>
 	</data>
 </T3locallang>

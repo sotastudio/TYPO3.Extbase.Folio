@@ -1,26 +1,9 @@
-<table class="tx-folio" >
-	<tr>
-		<td>
-			<f:translate key="tx_folio_domain_model_customer.name" />
-		</td>
-		<td>
-			{customer.name}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_folio_domain_model_customer.logo" />
-		</td>
-		<td>
-			{customer.logo}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_folio_domain_model_customer.description" />
-		</td>
-		<td>
-			{customer.description}
-		</td>
-	</tr>
-</table>
+<div class="tx-folio" >
+	<h2>{customer.name}</h2>
+	<figure class="customer">
+		<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="300" />
+	</figure>
+	<p>
+		<f:format.html>{customer.description}</f:format.html>
+	</p>
+</div>
