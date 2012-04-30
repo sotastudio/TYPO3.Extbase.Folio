@@ -9,7 +9,7 @@
 
 		<f:for each="{customer.project}" as="project">
 			<div class="customer-project-item">
-				<f:link.action action="show" arguments="{project : project}"> {project.name}</f:link.action>
+				<f:link.action controller="Project" action="show" arguments="{project : project}">{project.name}</f:link.action>
 			</div>
 		</f:for>
 	</div>
