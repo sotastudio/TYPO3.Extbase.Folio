@@ -3,7 +3,17 @@
 <f:section name="main">
 
 	<f:flashMessages />
-	<f:render partial="Customer/Properties" arguments="{customer:customer}" />
+	<div class="customer-show">
+		<f:render partial="Customer/Properties" arguments="{customer:customer}" />
+
+
+		<f:for each="{customer.project}" as="project">
+			<div class="customer-project-item">
+				<f:link.action action="show" arguments="{project : project}"> {project.name}</f:link.action>
+			</div>
+		</f:for>
+	</div>
+
 	<span class="back">
 		<f:link.action action="list">
 			<f:translate key="backToList">Back to list</f:translate>

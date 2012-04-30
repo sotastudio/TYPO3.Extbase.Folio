@@ -1,9 +1,5 @@
-<div class="tx-folio" >
-	<h2>{customer.name}</h2>
-	<figure class="customer">
-		<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="300" />
-	</figure>
-	<p>
-		<f:format.html>{customer.description}</f:format.html>
-	</p>
-</div>
+<h2>{customer.name}</h2>
+<figure class="customer">
+	<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="300" />
+</figure>
+<p><f:format.html>{customer.description}</f:format.html></p>

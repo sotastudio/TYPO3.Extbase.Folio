@@ -3,27 +3,25 @@
 <f:section name="main">
 <f:flashMessages />
 
-<div  class="tx_folio" >
-	<div class="customer-list">
-		<f:for each="{customers}" as="customer">
-			<div class="customer-item">
-				<h3><f:link.action action="show" arguments="{customer : customer}"> {customer.name}</f:link.action></h3>
-				<figure>
+<div class="customer-list">
+	<f:for each="{customers}" as="customer">
+		<div class="customer-item">
+			<h3><f:link.action action="show" arguments="{customer : customer}"> {customer.name}</f:link.action></h3>
+			<figure>
+				<f:link.action action="show" arguments="{customer : customer}">
+					<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="200" />
+				</f:link.action>
+			</figure>
+			<p>
+				<f:format.crop maxCharacters="200" append="&nbsp;..."><f:format.stripTags>{customer.description}</f:format.stripTags></f:format.crop>
+				<span class="customer-detail">
 					<f:link.action action="show" arguments="{customer : customer}">
-						<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="200" />
+						<f:translate key="customerDetails">Customer Details</f:translate>
 					</f:link.action>
-				</figure>
-				<p>
-					<f:format.crop maxCharacters="200" append="&nbsp;..."><f:format.stripTags>{customer.description}</f:format.stripTags></f:format.crop>
-					<span class="customer-detail">
-						<f:link.action action="show" arguments="{customer : customer}">
-							<f:translate key="customerDetails">Customer Details</f:translate>
-						</f:link.action>
-					</span>
-				</p>
-			</div>
-		</f:for>
-	</div>
+				</span>
+			</p>
+		</div>
+	</f:for>
 </div>
 
 </f:section>
