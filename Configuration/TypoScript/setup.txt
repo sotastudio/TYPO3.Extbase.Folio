@@ -11,6 +11,10 @@ plugin.tx_folio {
 				mapping {
 					tableName = tt_content
 					columns {
+						# Necessary mapping - do not remove!
+						crdate.mapOnProperty = crdate
+						tstamp.mapOnProperty = tstamp
+						CType.mapOnProperty = CType
 					}
 				}
 			}
