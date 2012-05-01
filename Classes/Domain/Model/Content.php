@@ -26,21 +26,310 @@
  ***************************************************************/
 
 /**
- *
+ * Model for the Project's content elements.
  *
  * @package folio
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
- *
  */
 class Tx_Folio_Domain_Model_Content extends Tx_Extbase_DomainObject_AbstractValueObject {
 
 	/**
-	 * __construct
-	 *
-	 * @return void
+	 * @var DateTime
 	 */
-	public function __construct() {
+	protected $crdate;
 
+	/**
+	 * @var DateTime
+	 */
+	protected $tstamp;
+
+	/**
+	 * @var string
+	 */
+	protected $CType;
+
+	/**
+	 * @var string
+	 */
+	protected $header;
+
+	/**
+	 * @var string
+	 */
+	protected $headerPosition;
+
+	/**
+	 * @var string
+	 */
+	protected $bodytext;
+
+	/**
+	 * @var string
+	 */
+	protected $image;
+
+	/**
+	 * @var integer
+	 */
+	protected $imagewidth;
+
+	/**
+	 * @var integer
+	 */
+	protected $imageorient;
+
+	/**
+	 * @var string
+	 */
+	protected $imagecaption;
+
+	/**
+	 * @var integer
+	 */
+	protected $imagecols;
+
+	/**
+	 * @var integer
+	 */
+	protected $imageborder;
+
+	/**
+	 * @var string
+	 */
+	protected $media;
+
+	/**
+	 * @var string
+	 */
+	protected $layout;
+
+	/**
+	 * @var integer
+	 */
+	protected $cols;
+
+	/**
+	 * @var string
+	 */
+	protected $subheader;
+
+	/**
+	 * @var string
+	 */
+	protected $headerLink;
+
+	/**
+	 * @var string
+	 */
+	protected $imageLink;
+
+	/**
+	 * @var string
+	 */
+	protected $imageZoom;
+
+	/**
+	 * @var string
+	 */
+	protected $altText;
+
+	/**
+	 * @var string
+	 */
+	protected $titleText;
+
+	/**
+	 * @var string
+	 */
+	protected $headerLayout;
+
+	/**
+	 * @var string
+	 */
+	protected $listType;
+
+	public function getCrdate() {
+		return $this->crdate;
+	}
+
+	public function setCrdate($crdate) {
+		$this->crdate = $crdate;
+	}
+
+	public function getTstamp() {
+		return $this->tstamp;
+	}
+
+	public function setTstamp($tstamp) {
+		$this->tstamp = $tstamp;
+	}
+
+	public function getCType() {
+		return $this->CType;
+	}
+
+	public function setCType($CType) {
+		$this->CType = $CType;
+	}
+
+	public function getHeader() {
+		return $this->header;
+	}
+
+	public function setHeader($header) {
+		$this->header = $header;
+	}
+
+	public function getHeaderPosition() {
+		return $this->headerPosition;
+	}
+
+	public function setHeaderPosition($headerPosition) {
+		$this->headerPosition = $headerPosition;
+	}
+
+	public function getBodytext() {
+		return $this->bodytext;
+	}
+
+	public function setBodytext($bodytext) {
+		$this->bodytext = $bodytext;
+	}
+
+	public function getImage() {
+		return $this->image;
+	}
+
+	public function setImage($image) {
+		$this->image = $image;
+	}
+
+	public function getImagewidth() {
+		return $this->imagewidth;
+	}
+
+	public function setImagewidth($imagewidth) {
+		$this->imagewidth = $imagewidth;
+	}
+
+	public function getImageorient() {
+		return $this->imageorient;
+	}
+
+	public function setImageorient($imageorient) {
+		$this->imageorient = $imageorient;
+	}
+
+	public function getImagecaption() {
+		return $this->imagecaption;
+	}
+
+	public function setImagecaption($imagecaption) {
+		$this->imagecaption = $imagecaption;
+	}
+
+	public function getImagecols() {
+		return $this->imagecols;
+	}
+
+	public function setImagecols($imagecols) {
+		$this->imagecols = $imagecols;
+	}
+
+	public function getImageborder() {
+		return $this->imageborder;
+	}
+
+	public function setImageborder($imageborder) {
+		$this->imageborder = $imageborder;
+	}
+
+	public function getMedia() {
+		return $this->media;
+	}
+
+	public function setMedia($media) {
+		$this->media = $media;
+	}
+
+	public function getLayout() {
+		return $this->layout;
+	}
+
+	public function setLayout($layout) {
+		$this->layout = $layout;
+	}
+
+	public function getCols() {
+		return $this->cols;
+	}
+
+	public function setCols($cols) {
+		$this->cols = $cols;
+	}
+
+	public function getSubheader() {
+		return $this->subheader;
+	}
+
+	public function setSubheader($subheader) {
+		$this->subheader = $subheader;
+	}
+
+	public function getHeaderLink() {
+		return $this->headerLink;
+	}
+
+	public function setHeaderLink($headerLink) {
+		$this->headerLink = $headerLink;
+	}
+
+	public function getImageLink() {
+		return $this->imageLink;
+	}
+
+	public function setImageLink($imageLink) {
+		$this->imageLink = $imageLink;
+	}
+
+	public function getImageZoom() {
+		return $this->imageZoom;
+	}
+
+	public function setImageZoom($imageZoom) {
+		$this->imageZoom = $imageZoom;
+	}
+
+	public function getAltText() {
+		return $this->altText;
+	}
+
+	public function setAltText($altText) {
+		$this->altText = $altText;
+	}
+
+	public function getTitleText() {
+		return $this->titleText;
+	}
+
+	public function setTitleText($titleText) {
+		$this->titleText = $titleText;
+	}
+
+	public function getHeaderLayout() {
+		return $this->headerLayout;
+	}
+
+	public function setHeaderLayout($headerLayout) {
+		$this->headerLayout = $headerLayout;
+	}
+
+	public function getListType() {
+		return $this->listType;
+	}
+
+	public function setListType($listType) {
+		$this->listType = $listType;
 	}
 
 }
