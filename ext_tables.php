@@ -97,14 +97,17 @@ $TCA['tx_folio_domain_model_tags'] = array(
 	),
 );
 
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,recursive,select_key,pages';
+
+/**
+ * Set 'passthrough' of type field for tt_content elements used in a Project.
+ */
 $tmp_folio_columns['project'] = array(
 	'config' => array(
 		'type' => 'passthrough',
 	)
 );
-
 t3lib_extMgm::addTCAcolumns('tt_content',$tmp_folio_columns);
-$TCA['tt_content']['columns']['project']['config']['type'] = 'passthrough';
 
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_Folio_Content','Tx_Folio_Content');
 

@@ -103,7 +103,7 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 	}
 
 	/**
-	 * Adds a Tags
+	 * Adds a Tag
 	 *
 	 * @param Tx_Folio_Domain_Model_Tags $tag
 	 * @return void
@@ -113,7 +113,7 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 	}
 
 	/**
-	 * Removes a Tags
+	 * Removes a Tag
 	 *
 	 * @param Tx_Folio_Domain_Model_Tags $tagToRemove The Tags to be removed
 	 * @return void
