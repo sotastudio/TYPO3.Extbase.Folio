@@ -8,6 +8,16 @@
 		<f:render partial="Project/Properties" arguments="{project:project}" />
 	</div>
 
+	<p>Tags:
+	<f:for each="{project.tags}" as="tag">
+		<span>{tag.name}</span>
+	</f:for>
+	</p>
+
+	<f:for each="{project.content}" as="content">
+		{content.uid}
+	</f:for>
+
 	<span class="back">
 		<f:link.action controller="Customer" action="list" arguments="{customer: customer}">
 			<f:translate key="backToList">Back to list</f:translate>

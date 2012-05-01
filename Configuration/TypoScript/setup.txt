@@ -6,6 +6,15 @@ plugin.tx_folio {
 	}
 	persistence {
 		storagePid = {$plugin.tx_folio.persistence.storagePid}
+		classes {
+			Tx_Folio_Domain_Model_Content {
+				mapping {
+					tableName = tt_content
+					columns {
+					}
+				}
+			}
+		}
 	}
  	settings {
  		css = {$plugin.tx_flexslider.settings.css}

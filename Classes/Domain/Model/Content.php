@@ -34,5 +34,14 @@
  */
 class Tx_Folio_Domain_Model_Content extends Tx_Extbase_DomainObject_AbstractValueObject {
 
+	/**
+	 * __construct
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+
+	}
+
 }
 ?>

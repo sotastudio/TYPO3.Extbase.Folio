@@ -52,7 +52,7 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * content
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Folio_Domain_Model_Content>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Folio_Domain_Model_Content> $content
 	 * @lazy
 	 */
 	protected $content;

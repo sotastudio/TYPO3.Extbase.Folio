@@ -34,9 +34,11 @@
  */
 class Tx_Folio_Domain_Repository_CustomerRepository extends Tx_Extbase_Persistence_Repository {
 
+	/*
 	protected $defaultOrderings = array(
 		'sorting' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
 	);
+	*/
 
 }
 ?>

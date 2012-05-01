@@ -104,12 +104,14 @@ $tmp_folio_columns['project'] = array(
 );
 
 t3lib_extMgm::addTCAcolumns('tt_content',$tmp_folio_columns);
+$TCA['tt_content']['columns']['project']['config']['type'] = 'passthrough';
 
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_Folio_Content','Tx_Folio_Content');
 
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= ',--div--;LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_content,';
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= '';
+
 
 /**
  * Add Ajax Router for Tag save in Flexform.

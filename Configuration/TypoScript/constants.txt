@@ -9,7 +9,16 @@ plugin.tx_folio {
 	}
 	persistence {
 		# cat=plugin.tx_folio//a; type=string; label=Default storage PID
-		storagePid = 
+		storagePid =
+		classes {
+			Tx_Folio_Domain_Model_Content {
+				mapping {
+					tableName = tt_content
+					columns {
+					}
+				}
+			}
+		}
 	}
 	settings {
 		# String: File reference to the FlexSlider's Css file - empty this value if you want to include this at your own
