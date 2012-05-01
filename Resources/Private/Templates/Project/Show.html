@@ -15,7 +15,11 @@
 	</p>
 
 	<f:for each="{project.content}" as="content">
-		{content.uid}
+		<f:debug>{content}</f:debug>
+		<f:if condition="{content}">
+			<f:cObject typoscriptObjectPath="tt_content.{content.CType}.10" data="{content}" />
+			<f:cObject typoscriptObjectPath="tt_content.{content.CType}.20" data="{content}" />
+		</f:if>
 	</f:for>
 
 	<span class="back">
