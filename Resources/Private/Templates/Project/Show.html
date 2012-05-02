@@ -4,23 +4,23 @@
 
 	<f:flashMessages />
 
-	<div class="customer-project-list">
-		<f:render partial="Project/Properties" arguments="{project:project}" />
-	</div>
-
-	<p>Tags:
-	<f:for each="{project.tags}" as="tag">
-		<span>{tag.name}</span>
-	</f:for>
-	</p>
+	<f:render partial="Project/Properties" arguments="{project:project}" />
 
 	<f:for each="{project.content}" as="content">
-		<f:debug>{content}</f:debug>
-		<f:if condition="{content}">
-			<f:cObject typoscriptObjectPath="tt_content.{content.CType}.10" data="{content}" />
-			<f:cObject typoscriptObjectPath="tt_content.{content.CType}.20" data="{content}" />
+		<f:if condition="{content.ctype}">
+			<f:cObject typoscriptObjectPath="tt_content.{content.ctype}.10" data="{content}" />
+			<f:cObject typoscriptObjectPath="tt_content.{content.ctype}.20" data="{content}" />
 		</f:if>
 	</f:for>
+
+	<div class="project-tags">
+		<p><strong><f:translate key="tags">Tags:</f:translate></strong></p>
+		<ul class="project-tags-list">
+		<f:for each="{project.tags}" as="tag">
+			<li>{tag.name}</li>
+		</f:for>
+		</ul>
+	</div>
 
 	<span class="back">
 		<f:link.action controller="Customer" action="list" arguments="{customer: customer}">
