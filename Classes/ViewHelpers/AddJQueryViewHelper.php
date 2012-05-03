@@ -63,12 +63,12 @@ class Tx_Folio_ViewHelpers_AddJQueryViewHelper extends Tx_Fluid_Core_ViewHelper_
 
 		} else {
 			if ($altJQueryFile) {
-				Tx_Flexslider_Utility_Div::addCssJsFile(
+				Tx_Folio_Utility_Div::addCssJsFile(
 					$altJQueryFile,
 					'folioJQuery'
 				);
 			} else {
-				Tx_Flexslider_Utility_Div::renderFlashMessage(
+				Tx_Folio_Utility_Div::renderFlashMessage(
 					'jQuery not loaded',
 					'jQuery could not be loaded. Please check the path to the alternative jQuery library or simply use the Extension t3jquery.',
 					t3lib_FlashMessage::ERROR

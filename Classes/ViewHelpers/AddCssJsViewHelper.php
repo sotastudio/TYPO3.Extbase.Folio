@@ -59,7 +59,7 @@ class Tx_Folio_ViewHelpers_AddCssJsViewHelper extends Tx_Fluid_Core_ViewHelper_A
 			// Get file extension (after last occurance of a dot)
 			$mediaTypeSplit = strrchr($file, '.');
 
-			Tx_Flexslider_Utility_Div::addCssJsFile(
+			Tx_Folio_Utility_Div::addCssJsFile(
 				$file,
 				($mediaTypeSplit == '.js') ? 'folioJs' : 'folioCss',
 				$moveToFooter
