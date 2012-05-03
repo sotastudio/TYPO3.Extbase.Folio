@@ -21,11 +21,28 @@ plugin.tx_folio {
 		}
 	}
  	settings {
- 		css = {$plugin.tx_flexslider.settings.css}
+ 		css = {$plugin.tx_folio.settings.css}
  		lib {
- 			jQuery = {$plugin.tx_flexslider.settings.lib.jQuery}
- 			moveToFooter = {$plugin.tx_flexslider.settings.lib.moveToFooter}
+ 			jQuery = {$plugin.tx_folio.settings.lib.jQuery}
+ 			moveToFooter = {$plugin.tx_folio.settings.lib.moveToFooter}
  		}
+ 		customer {
+			list {
+				descriptionShow = 1
+				descriptopnLength =
+			}
+			show {
+
+			}
+		}
+		project {
+			list {
+
+			}
+			show {
+
+			}
+		}
 	}
 }
 

@@ -3,7 +3,7 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-	// Build extension name vars - used for plugin registration, flexforms and similar
+// Build extension name vars - used for plugin registration, flexforms and similar
 $extensionName = t3lib_div::underscoredToUpperCamelCase($_EXTKEY);
 $pluginSignature = strtolower($extensionName) . '_pi1';
 
@@ -13,6 +13,11 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 	'Folio'
 );
 
+// Inlcude Plugin FlexForm Settings and show in Backend
+t3lib_extMgm::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform.xml');
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+
+// Include Static Extension Template/TypoScript Setup
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Folio');
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_folio_domain_model_customer', 'EXT:folio/Resources/Private/Language/locallang_csh_tx_folio_domain_model_customer.xml');
@@ -97,7 +102,7 @@ $TCA['tx_folio_domain_model_tags'] = array(
 	),
 );
 
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,recursive,select_key';
 
 /**
  * Set 'passthrough' of type field for tt_content elements used in a Project.

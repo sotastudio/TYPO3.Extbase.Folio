@@ -1,0 +1,65 @@
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+
+	<sheets>
+
+		<!-- General Settinfs / Begin -->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:folio/Resources/Private/Language/locallang_be.xml:flexforms_tab.settings
+					</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<settings.customer.list.descriptionShow>
+						<TCEforms>
+							<label>
+								LLL:EXT:folio/Resources/Private/Language/locallang_be.xml:flexforms_settings.descriptionShow
+							</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.customer.list.descriptionShow>
+
+					<settings.customer.list.descriptionLength>
+						<TCEforms>
+							<label>
+								LLL:EXT:folio/Resources/Private/Language/locallang_be.xml:flexforms_settings.descriptionLength
+							</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+							</config>
+						</TCEforms>
+					</settings.customer.list.descriptionLength>
+
+				</el>
+			</ROOT>
+		</sDEF>
+		<!-- General Settings / End -->
+
+		<!-- List View Settings / Beging -->
+		<list>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:folio/Resources/Private/Language/locallang_be.xml:flexforms_tab.view.list
+					</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+
+
+				</el>
+			</ROOT>
+		</list>
+		<!-- List View Settings / End -->
+
+	</sheets>
+</T3DataStructure>

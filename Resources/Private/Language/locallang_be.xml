@@ -2,7 +2,7 @@
 <T3locallang>
 	<meta type="array">
 		<type>module</type>
-		<description>Language labels for the flexslider extension in the BACKEND</description>
+		<description>Language labels for the folio extension in the BACKEND</description>
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
@@ -10,6 +10,10 @@
 			<label index="pi1_plus_wiz_description">Plugin to display a Portfolio.</label>
 			<!-- Flexforms -->
 			<label index="flexforms_tab.settings">Settings</label>
+			<label index="flexforms_tab.view.list">List View</label>
+			<label index="flexforms_tab.view.show">Single View</label>
+			<label index="flexforms_settings.descriptionShow">Show desc</label>
+			<label index="flexforms_settings.descriptionLength">Desc length</label>
 			<!-- FlexForms: Suggest Receiver -->
 			<label index="tag_suggest">Tag "%s" could not be found, wanna create it? &lt;strong&gt;Click here&lt;/strong&gt;</label>
 			<label index="tag_suggest_error_noTag">No tag submitted!</label>

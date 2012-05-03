@@ -12,7 +12,7 @@ plugin.tx_folio {
 		storagePid =
 	}
 	settings {
-		# String: File reference to the FlexSlider's Css file - empty this value if you want to include this at your own
+		# String: File reference to the Folio's Css file - empty this value if you want to include this at your own
 		css = EXT:folio/Resources/Public/Css/styles.css
  		lib {
  			# String: File reference to alternative jQuery library if EXT t3jquery is not in use
