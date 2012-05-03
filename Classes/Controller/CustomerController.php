@@ -32,7 +32,8 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Folio_Controller_CustomerController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_Folio_Controller_CustomerController extends Tx_Extbase_MVC_Controller_ActionController
+{
 
 	/**
 	 * customerRepository
@@ -47,7 +48,8 @@ class Tx_Folio_Controller_CustomerController extends Tx_Extbase_MVC_Controller_A
 	 * @param Tx_Folio_Domain_Repository_CustomerRepository $customerRepository
 	 * @return void
 	 */
-	public function injectCustomerRepository(Tx_Folio_Domain_Repository_CustomerRepository $customerRepository) {
+	public function injectCustomerRepository(Tx_Folio_Domain_Repository_CustomerRepository $customerRepository)
+	{
 		$this->customerRepository = $customerRepository;
 	}
 
@@ -56,7 +58,8 @@ class Tx_Folio_Controller_CustomerController extends Tx_Extbase_MVC_Controller_A
 	 *
 	 * @return void
 	 */
-	public function listAction() {
+	public function listAction()
+	{
 		$customers = $this->customerRepository->findAll();
 		$this->view->assign('customers', $customers);
 	}
@@ -67,7 +70,8 @@ class Tx_Folio_Controller_CustomerController extends Tx_Extbase_MVC_Controller_A
 	 * @param $customer
 	 * @return void
 	 */
-	public function showAction(Tx_Folio_Domain_Model_Customer $customer) {
+	public function showAction(Tx_Folio_Domain_Model_Customer $customer)
+	{
 		$this->view->assign('customer', $customer);
 	}
 

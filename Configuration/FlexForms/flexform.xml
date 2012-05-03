@@ -54,7 +54,17 @@
 				<type>array</type>
 				<el>
 
-
+					<settings.customer.list.d>
+						<TCEforms>
+							<label>
+								LLL:EXT:folio/Resources/Private/Language/locallang_be.xml:flexforms_settings.d
+							</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+							</config>
+						</TCEforms>
+					</settings.customer.list.d>
 
 				</el>
 			</ROOT>

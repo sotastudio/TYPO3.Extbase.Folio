@@ -104,9 +104,8 @@ $TCA['tx_folio_domain_model_tags'] = array(
 
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,recursive,select_key';
 
-/**
- * Set 'passthrough' of type field for tt_content elements used in a Project.
- */
+
+// Set 'passthrough' of type field for tt_content elements used in a Project.
 $tmp_folio_columns['project'] = array(
 	'config' => array(
 		'type' => 'passthrough',
@@ -121,16 +120,13 @@ $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= ',--div--;LLL:EXT
 $TCA['tt_content']['types']['Tx_Folio_Content']['showitem'] .= '';
 
 
-/**
- * Add Ajax Router for Tag save in Flexform.
- */
+
+// Add Ajax Router for Tag save in Flexform.
 if (TYPO3_MODE == 'BE') {
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['AJAX']['Folio::createTag'] = 'typo3conf/ext/folio/Classes/Hooks/SuggestReceiverCall.php:Tx_Folio_Hooks_SuggestReceiverCall->createTag';
 }
 
-/**
- * Add Plugin to New Content Element Wizard.
- */
+// Add Plugin to New Content Element Wizard.
 if (TYPO3_MODE === 'BE') {
 	// Add Plugin to CE Wizard
 	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses'][$pluginSignature . '_wizicon'] = t3lib_extMgm::extPath($_EXTKEY) . 'Resources/Private/Php/class.' . $_EXTKEY . '_wizicon.php';

@@ -20,6 +20,7 @@ plugin.tx_folio {
 			}
 		}
 	}
+	settings >
  	settings {
  		css = {$plugin.tx_folio.settings.css}
  		lib {
