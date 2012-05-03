@@ -29,7 +29,7 @@ Coming soon…
 
 _This section isn't completed yet._
 
-	plugin.tx_flexslider {
+	plugin.tx_folio {
 		settings {
 			view {
 				# Necessary options, if you plan to manipulate the templates
