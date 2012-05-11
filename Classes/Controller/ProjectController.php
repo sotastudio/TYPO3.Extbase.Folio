@@ -32,7 +32,45 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Folio_Controller_ProjectController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_Folio_Controller_ProjectController extends Tx_Extbase_MVC_Controller_ActionController
+{
+
+	/**
+	 * customerRepository
+	 *
+	 * @var Tx_Folio_Domain_Repository_CustomerRepository
+	 */
+	protected $customerRepository;
+
+	/**
+	 * injectCustomerRepository
+	 *
+	 * @param Tx_Folio_Domain_Repository_CustomerRepository $customerRepository
+	 * @return void
+	 */
+	public function injectCustomerRepository(Tx_Folio_Domain_Repository_CustomerRepository $customerRepository)
+	{
+		$this->customerRepository = $customerRepository;
+	}
+
+
+	/**
+	 * projectRepository
+	 *
+	 * @var Tx_Folio_Domain_Repository_ProjectRepository
+	 */
+	protected $projectRepository;
+
+	/**
+	 * injectProjectRepository
+	 *
+	 * @param Tx_Folio_Domain_Repository_ProjectRepository $projectRepository
+	 * @return void
+	 */
+	public function injectProjectRepository(Tx_Folio_Domain_Repository_ProjectRepository $projectRepository)
+	{
+		$this->projectRepository = $projectRepository;
+	}
 
 	/**
 	 * action list
