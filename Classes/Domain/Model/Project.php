@@ -32,7 +32,15 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEntity
+{
+
+	/**
+	 * customer
+	 *
+	 * @var Tx_Folio_Domain_Model_Customer
+	 */
+	protected $customer;
 
 	/**
 	 * name
@@ -78,10 +86,22 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
+		$this->customer = new Tx_Extbase_Persistence_ObjectStorage();
+
 		$this->tags = new Tx_Extbase_Persistence_ObjectStorage();
 		
 		$this->content = new Tx_Extbase_Persistence_ObjectStorage();
 	}
+
+	/**
+	 * Returns the customer
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Folio_Domain_Model_Customer> $customer
+	 */
+	public function getCustomer() {
+		return $this->customer;
+	}
+
 
 	/**
 	 * Returns the name
