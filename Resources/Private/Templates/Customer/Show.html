@@ -3,7 +3,7 @@
 <f:section name="main">
 
 	<f:flashMessages />
-	
+
 	<div>
 		<f:render partial="Customer/Properties" arguments="{customer:customer}" />
 
@@ -14,8 +14,8 @@
 				</h3>
 				<p>
 					<f:format.crop maxCharacters="200" append="&nbsp;..."><f:format.stripTags>{project.description}</f:format.stripTags></f:format.crop>
-					<span class="customer-detail">
-						<f:link.action action="show" arguments="{customer : customer}">
+					<span>
+						<f:link.action controller="Project" action="show" arguments="{project : project}">
 							<f:translate key="project.details">Project Details</f:translate>
 						</f:link.action>
 					</span>
