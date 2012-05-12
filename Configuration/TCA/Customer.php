@@ -3,14 +3,16 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
+$pathLL = 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:';
+
 $TCA['tx_folio_domain_model_customer'] = array(
 	'ctrl' => $TCA['tx_folio_domain_model_customer']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, logo, description, project',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, description, project',
 	),
 	'types' => array(
 		'1' => array(
-			'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, name, logo, description,'
+			'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, title, image, description,'
 						. '--div--;LLL:EXT:folio/Resources/Private/Language/locallang_tca.xml:tabs.projects, project,'
 				. '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, hidden;;1, starttime, endtime'
 		),
@@ -106,22 +108,22 @@ $TCA['tx_folio_domain_model_customer'] = array(
 				'eval' => 'trim,required'
 			),
 		),
-		'logo' => array(
+		'image' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_customer.logo',
+			'label' => $pathLL . 'tx_folio_domain_model_customer.image',
 			'config' => array(
 				'type' => 'group',
 				'internal_type' => 'file',
 				'uploadfolder' => 'uploads/tx_folio',
 				'show_thumbs' => 1,
-				'size' => 5,
+				'size' => 1,
 				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
 				'disallowed' => '',
 			),
 		),
 		'description' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_customer.description',
+			'label' => $pathLL . 'tx_folio_domain_model_customer.description',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -142,7 +144,7 @@ $TCA['tx_folio_domain_model_customer'] = array(
 		),
 		'project' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_customer.project',
+			'label' => $pathLL . 'tx_folio_domain_model_customer.project',
 			'config' => array(
 				'type' => 'inline',
 				'foreign_table' => 'tx_folio_domain_model_project',

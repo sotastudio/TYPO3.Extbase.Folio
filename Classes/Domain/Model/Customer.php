@@ -43,12 +43,12 @@ class Tx_Folio_Domain_Model_Customer extends Tx_Extbase_DomainObject_AbstractEnt
 	protected $title;
 
 	/**
-	 * logo
+	 * image
 	 *
 	 * @var string
 	 * @validate NotEmpty
 	 */
-	protected $logo;
+	protected $image;
 
 	/**
 	 * description
@@ -109,22 +109,22 @@ class Tx_Folio_Domain_Model_Customer extends Tx_Extbase_DomainObject_AbstractEnt
 	}
 
 	/**
-	 * Returns the logo
+	 * Returns the image
 	 *
-	 * @return string $logo
+	 * @return string $image
 	 */
-	public function getLogo() {
-		return $this->logo;
+	public function getImage() {
+		return $this->image;
 	}
 
 	/**
-	 * Sets the logo
+	 * Sets the image
 	 *
-	 * @param string $logo
+	 * @param string $image
 	 * @return void
 	 */
-	public function setLogo($logo) {
-		$this->logo = $logo;
+	public function setImage($image) {
+		$this->image = $image;
 	}
 
 	/**
