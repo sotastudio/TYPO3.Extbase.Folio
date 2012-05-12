@@ -35,12 +35,12 @@
 class Tx_Folio_Domain_Model_Customer extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
-	 * name
+	 * title
 	 *
 	 * @var string
 	 * @validate NotEmpty
 	 */
-	protected $name;
+	protected $title;
 
 	/**
 	 * logo
@@ -90,22 +90,22 @@ class Tx_Folio_Domain_Model_Customer extends Tx_Extbase_DomainObject_AbstractEnt
 	}
 
 	/**
-	 * Returns the name
+	 * Returns the title
 	 *
-	 * @return string $name
+	 * @return string $title
 	 */
-	public function getName() {
-		return $this->name;
+	public function getTitle() {
+		return $this->title;
 	}
 
 	/**
-	 * Sets the name
+	 * Sets the title
 	 *
-	 * @param string $name
+	 * @param string $title
 	 * @return void
 	 */
-	public function setName($name) {
-		$this->name = $name;
+	public function setTitle($title) {
+		$this->title = $title;
 	}
 
 	/**

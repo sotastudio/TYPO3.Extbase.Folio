@@ -25,7 +25,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_folio_domain_model_customer');
 $TCA['tx_folio_domain_model_customer'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_customer',
-		'label' => 'name',
+		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -53,7 +53,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_folio_domain_model_project');
 $TCA['tx_folio_domain_model_project'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_project',
-		'label' => 'name',
+		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',

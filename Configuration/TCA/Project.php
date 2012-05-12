@@ -8,11 +8,11 @@ $pathLL = 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:';
 $TCA['tx_folio_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_folio_domain_model_project']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, tags, content',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, tags, content',
 	),
 	'types' => array(
 		'1' => array(
-			'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, name,'
+			'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, title, image, description,'
 						. '--div--;LLL:EXT:folio/Resources/Private/Language/locallang_tca.xml:tabs.ce, content,'
 						. '--div--;LLL:EXT:folio/Resources/Private/Language/locallang_tca.xml:tabs.relations, tags,'
 						. '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, hidden;;1, starttime, endtime'
@@ -100,14 +100,48 @@ $TCA['tx_folio_domain_model_project'] = array(
 				),
 			),
 		),
-		'name' => array(
+		'title' => array(
 			'exclude' => 0,
-			'label' => $pathLL . 'tx_folio_domain_model_project.name',
+			'label' => $pathLL . 'tx_folio_domain_model_project.title',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
+		),
+		'image' => array(
+			'exclude' => 0,
+			'label' => $pathLL . 'tx_folio_domain_model_project.image',
+			'config' => array(
+				'type' => 'group',
+				'internal_type' => 'file',
+				'uploadfolder' => 'uploads/tx_folio',
+				'show_thumbs' => 1,
+				'size' => 1,
+				'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+				'disallowed' => '',
+			),
+		),
+		'description' => array(
+			'exclude' => 0,
+			'label' => $pathLL . 'tx_folio_domain_model_project.description',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords'=> 1,
+						'RTEonly' => 1,
+						'script' => 'wizard_rte.php',
+						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
+			),
+			'defaultExtras' => 'richtext[]',
 		),
 		'tags' => array(
 			'exclude' => 0,

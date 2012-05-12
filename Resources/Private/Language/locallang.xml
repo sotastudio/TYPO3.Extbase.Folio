@@ -7,23 +7,30 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_folio_domain_model_customer">Customer</label>
-			<label index="tx_folio_domain_model_customer.name">name</label>
-			<label index="tx_folio_domain_model_customer.logo">logo</label>
-			<label index="tx_folio_domain_model_customer.description">description</label>
-			<label index="tx_folio_domain_model_customer.project">project</label>
+			<label index="tx_folio_domain_model_customer.title">Title</label>
+			<label index="tx_folio_domain_model_customer.image">Image</label>
+			<label index="tx_folio_domain_model_customer.description">Description</label>
+			<label index="tx_folio_domain_model_customer.project">Project</label>
 			<label index="tx_folio_domain_model_project">Project</label>
-			<label index="tx_folio_domain_model_project.name">name</label>
-			<label index="tx_folio_domain_model_project.tags">tags</label>
-			<label index="tx_folio_domain_model_project.content">content</label>
+			<label index="tx_folio_domain_model_project.title">Title</label>
+			<label index="tx_folio_domain_model_project.image">Image</label>
+			<label index="tx_folio_domain_model_project.description">Description</label>
+			<label index="tx_folio_domain_model_project.tags">Tags</label>
+			<label index="tx_folio_domain_model_project.content">Content</label>
 			<label index="tx_folio_domain_model_tags">Tags</label>
 			<label index="tx_folio_domain_model_content">Content</label>
 			<label index="tags">Tags:</label>
 			<label index="backToList">Back to list</label>
 			<label index="customerDetails">Customer details</label>
 			<label index="projectDetails">Project details</label>
+			<label index="customer.list">Customer List</label>
+			<label index="project.list">Project List</label>
+			<label index="customer.details">Customer Details</label>
+			<label index="project.details">Project Details</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="tags">Tags:</label>
+			<label index="backTo">Zurück zu </label>
 			<label index="backToList">Zurück zur Liste</label>
 			<label index="customerDetails">Kunden Details</label>
 			<label index="projectDetails">Projekt Details</label>

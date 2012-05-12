@@ -43,11 +43,26 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 	protected $customer;
 
 	/**
-	 * name
+	 * title
 	 *
 	 * @var string
 	 */
-	protected $name;
+	protected $title;
+
+	/**
+	 * image
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $image;
+
+	/**
+	 * description
+	 *
+	 * @var string
+	 */
+	protected $description;
 
 	/**
 	 * tags
@@ -104,22 +119,60 @@ class Tx_Folio_Domain_Model_Project extends Tx_Extbase_DomainObject_AbstractEnti
 
 
 	/**
-	 * Returns the name
+	 * Returns the title
 	 *
-	 * @return string $name
+	 * @return string $title
 	 */
-	public function getName() {
-		return $this->name;
+	public function getTitle() {
+		return $this->title;
 	}
 
 	/**
-	 * Sets the name
+	 * Sets the title
 	 *
-	 * @param string $name
+	 * @param string $title
 	 * @return void
 	 */
-	public function setName($name) {
-		$this->name = $name;
+	public function setTitle($title) {
+		$this->title = $title;
+	}
+
+	/**
+	 * Returns the image
+	 *
+	 * @return string $image
+	 */
+	public function getImage() {
+		return $this->image;
+	}
+
+	/**
+	 * Sets the image
+	 *
+	 * @param string $image
+	 * @return void
+	 */
+	public function setImage($image) {
+		$this->image = $image;
+	}
+
+	/**
+	 * Returns the description
+	 *
+	 * @return string $description
+	 */
+	public function getDescription() {
+		return $this->description;
+	}
+
+	/**
+	 * Sets the description
+	 *
+	 * @param string $description
+	 * @return void
+	 */
+	public function setDescription($description) {
+		$this->description = $description;
 	}
 
 	/**

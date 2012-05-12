@@ -1,5 +1,9 @@
-<h2>{customer.name}</h2>
+<h2>{customer.title}</h2>
+
 <figure class="customer">
-	<f:image src="uploads/tx_folio/{customer.logo}" alt="{customer.name}" width="300" />
+	<f:image src="uploads/tx_folio/{customer.image}" alt="{customer.title}" width="300" />
 </figure>
+
 <p><f:format.html>{customer.description}</f:format.html></p>
+
+<div class="divider"><hr /></div>

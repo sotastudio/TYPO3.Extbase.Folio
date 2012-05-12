@@ -3,21 +3,31 @@
 <f:section name="main">
 
 	<f:flashMessages />
-	<div class="customer-show">
+	
+	<div>
 		<f:render partial="Customer/Properties" arguments="{customer:customer}" />
 
-
 		<f:for each="{customer.project}" as="project">
-			<div class="customer-project-item">
-				<f:link.action controller="Project" action="show" arguments="{project : project}">{project.name}</f:link.action>
-			</div>
+			<section>
+				<h3>
+					<f:link.action controller="Project" action="show" arguments="{project : project}">{project.title}</f:link.action>
+				</h3>
+				<p>
+					<f:format.crop maxCharacters="200" append="&nbsp;..."><f:format.stripTags>{project.description}</f:format.stripTags></f:format.crop>
+					<span class="customer-detail">
+						<f:link.action action="show" arguments="{customer : customer}">
+							<f:translate key="project.details">Project Details</f:translate>
+						</f:link.action>
+					</span>
+				</p>
+			</section>
 		</f:for>
 	</div>
 
-	<span class="back">
+	<p>
 		<f:link.action action="list">
-			<f:translate key="backToList">Back to list</f:translate>
+			<f:translate key="backTo">Back to </f:translate><f:translate key="customer.list">Customer List</f:translate>
 		</f:link.action>
-	</span>
+	</p>
 
 </f:section>

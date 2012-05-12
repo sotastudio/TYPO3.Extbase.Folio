@@ -97,9 +97,9 @@ $TCA['tx_folio_domain_model_customer'] = array(
 				),
 			),
 		),
-		'name' => array(
+		'title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:folio/Resources/Private/Language/locallang_db.xml:tx_folio_domain_model_customer.name',
+			'label' => $pathLL . 'tx_folio_domain_model_customer.title',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

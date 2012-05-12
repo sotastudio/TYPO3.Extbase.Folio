@@ -8,14 +8,16 @@
 		<languageKey index="default" type="array">
 			<!-- Model: Customer -->
 			<label index="tx_folio_domain_model_customer">Customer</label>
-			<label index="tx_folio_domain_model_customer.name">Name</label>
-			<label index="tx_folio_domain_model_customer.logo">Logo</label>
+			<label index="tx_folio_domain_model_customer.title">Title</label>
+			<label index="tx_folio_domain_model_customer.image">Image</label>
 			<label index="tx_folio_domain_model_customer.description">Description</label>
 			<label index="tx_folio_domain_model_customer.project">Project</label>
 			<!-- Model: Project -->
 			<label index="tx_folio_domain_model_project">Project</label>
-			<label index="tx_folio_domain_model_project.name">Name</label>
+			<label index="tx_folio_domain_model_project.title">Title</label>
+			<label index="tx_folio_domain_model_project.image">Image</label>
 			<label index="tx_folio_domain_model_project.tags">Tags</label>
+			<label index="tx_folio_domain_model_project.description">Description</label>
 			<label index="tx_folio_domain_model_project.content">Content</label>
 			<!--Model: Tags -->
 			<label index="tx_folio_domain_model_tags">Tags</label>
